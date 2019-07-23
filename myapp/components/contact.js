@@ -12,7 +12,7 @@ export default class Contact extends React.Component {
             <ImageBackground source={require('./images/contact.jpg')} style={{width: '100%', height: '100%'}}>
                 <View style={style.container}>
                     <Button
-                        title="Back To Home Screen"
+                        title="Back To Menu Screen"
                         onPress={() => navigate('Home')}
                     />
                 </View>

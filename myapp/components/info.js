@@ -9,7 +9,7 @@ export default class Info extends React.Component {
                 <ImageBackground source={require('./images/info.png')} style={{backgroundColor: 'black', width: '102%', height: '100%'}}>
                     <View style={style.buttonStyle}>
                         <Button
-                            title="Go back to Main"
+                            title="Go back to Menu Screen"
                             onPress={() => navigate('Home')}
                             
                         />

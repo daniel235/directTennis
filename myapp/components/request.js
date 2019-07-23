@@ -34,24 +34,24 @@ export default class Request extends React.Component {
                             onBlur={Keyboard.dismiss}
                         />
                     </View>
-                    <TouchableOpacity
-                        onPress={() => navigate('Form', {
-                            firstName: this.state.f,
-                            lastName: this.state.l
-                        })}
-                        style={stylo.button}
-                    >
-                        <Text style={{color: 'white', alignItems: 'center', fontSize: 20, fontWeight: 'bold'}}>Next</Text>
-                    </TouchableOpacity>
+                    <View style={{flex: 1, flexDirection: 'row'}}>
+                        <TouchableOpacity
+                            onPress={() => navigate('Home')}
+                            style={stylo.button}
+                        >
+                            <Text style={{color: 'white', alignItems: 'center', fontSize: 20, fontWeight: 'bold'}}>Back</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={() => navigate('Form', {
+                                firstName: this.state.f,
+                                lastName: this.state.l
+                            })}
+                            style={stylo.button}
+                        >
+                            <Text style={{color: 'white', alignItems: 'center', fontSize: 20, fontWeight: 'bold'}}>Next</Text>
+                        </TouchableOpacity>
+                    </View>
                 
-                
-                    <TouchableOpacity
-                        onPress={() => navigate('Home')}
-                        style={stylo.button}
-                    >
-                        <Text style={{color: 'white', alignItems: 'center', fontSize: 20, fontWeight: 'bold'}}>Back</Text>
-                    </TouchableOpacity>
-                    
             </ScrollView>
             </ImageBackground>
         );
@@ -65,21 +65,20 @@ var stylo = StyleSheet.create({
     },
 
     box1 : {
-        marginTop: '10%',
-        height: '20%',
-        alignItems: 'center'
+        marginTop: '50%',
+        alignItems: 'center',
     },
     box2 : {
-        height: '20%',
-        marginTop: 100,
+        marginTop: '10%',
         alignItems: 'center',
         paddingBottom: '10%',
     },
     button : {
         backgroundColor: "#37bbf0",
-        width: '80%',
-        height: '15%',
+        width: '40%',
+        alignContent: 'center',
+        alignItems: 'center',
         borderWidth: 1.5,
-        marginLeft: '10%',
+        marginLeft: '5%',
     }
 });

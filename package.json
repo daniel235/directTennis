@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "react-native-really-awesome-button": "^1.4.2",
     "react-navigation": "^3.11.0"
   }
 }

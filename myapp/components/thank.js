@@ -9,7 +9,7 @@ export default class ThankYou extends React.Component {
                 <View style={{width: '100%', height: '100%', flexDirection: 'column', flex: 1, justifyContent: 'space-between'}}>
                     <View style={style.button}>
                         <Button
-                            title="Go back to Home"
+                            title="Go back to Menu Screen"
                             onPress={() => navigate('Home')}
                         />
                     </View>

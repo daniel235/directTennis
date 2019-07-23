@@ -62,7 +62,7 @@ export default class Form extends React.Component {
             <ImageBackground source={require("./images/raquet.png")} style={{width: '100%', height: '100%'}}>
             <ScrollView style={{width: '100%'}}>
                 <KeyboardAvoidingView>
-                    <Text style={{fontSize: 30, alignItems: 'center', width: '100%', marginLeft: '10%', fontWeight: 'bold', fontFamily: 'sans-serif', color: "#F1F639", marginTop: '3%'}}>Request Stringing Form</Text>
+                    <Text style={{fontSize: 30, alignItems: 'center', width: '100%', marginLeft: '10%', fontWeight: 'bold', fontFamily: 'sans-serif', color: "#F1F639", marginTop: '3%'}}>Racquet Stringing Form</Text>
                     <TextInput
                         style={style.styles}
                         placeholder="Phone Number"
@@ -144,7 +144,7 @@ export default class Form extends React.Component {
 
 const style = StyleSheet.create({
     styles : {
-        backgroundColor: "#97aac9",
+        backgroundColor: "white",
         height: '5%',
         width: '90%',
         marginTop: '5%',
@@ -153,7 +153,7 @@ const style = StyleSheet.create({
         marginLeft: '5%'
     },
     textAreaStyles : {
-        backgroundColor: "#97aac9",
+        backgroundColor: "white",
         height: '10%',
         width: '90%',
         marginTop: '5%',

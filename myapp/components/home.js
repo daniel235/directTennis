@@ -19,8 +19,8 @@ export default class Home extends React.Component {
                         <TouchableOpacity
                             style={style.infoButton}
                             onPress={() => navigate('Info')}
-                            accessibilityLabel="What is Direct Tennis"
-                        ><Text style={style.textStyle}>What is Direct Tennis</Text></TouchableOpacity>
+                            accessibilityLabel="What is Direct Tennis?"
+                        ><Text style={style.textStyle}>What is Direct Tennis?</Text></TouchableOpacity>
                     
                         <TouchableOpacity
                             style={style.contactButton}
