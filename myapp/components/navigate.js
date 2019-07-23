@@ -6,6 +6,7 @@ import Request from "./request.js";
 import Form from "./form.js";
 import ThankYou from "./thank.js";
 import Info from "./info.js";
+import Contact from "./contact.js";
 
 const AppNavigator = createStackNavigator({
     Home: {screen: Home},
@@ -13,6 +14,7 @@ const AppNavigator = createStackNavigator({
     Form: {screen: Form},
     Thank : {screen: ThankYou},
     Info : {screen: Info},
+    Contact : {screen: Contact},
     initialRouteName: Home,
 });
 
