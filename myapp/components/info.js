@@ -6,7 +6,7 @@ export default class Info extends React.Component {
         const {navigate} = this.props.navigation;
         return(
             <View>
-                <ImageBackground source={require('./images/info.png')} style={{backgroundColor: 'black', width: '102%', height: '100%'}}>
+                <ImageBackground source={require('./images/info.jpg')} style={{backgroundColor: 'black', width: '102%', height: '100%'}}>
                     <View style={style.buttonStyle}>
                         <Button
                             title="Go back to Menu Screen"
