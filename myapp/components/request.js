@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, ImageBackground, Button, KeyboardAvoidingView, Keyboard, TouchableOpacity, Image, ScrollView } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 export default class Request extends React.Component {
     constructor(props){
@@ -14,8 +15,9 @@ export default class Request extends React.Component {
     render() {
         const {navigate} = this.props.navigation;
         return(
-            <ImageBackground source={require("./images/client.jpg")} style={{width: '100%', height: '100%'}}>
+            <ImageBackground source={require("./images/client.jpg")} style={{width: wp('100%'), height: hp('100%'), flex: 1}}>
             <ScrollView>
+                <View style={stylo.formStyle}>
                     <View style={stylo.box1}>
                         <TextInput
                             style={stylo.styles}
@@ -39,7 +41,7 @@ export default class Request extends React.Component {
                             onPress={() => navigate('Home')}
                             style={stylo.button}
                         >
-                            <Text style={{color: 'white', alignItems: 'center', fontSize: 20, fontWeight: 'bold'}}>Back</Text>
+                            <Text style={{color: 'white', paddingTop: hp('1%'),paddingBottom: hp('1%'), alignItems: 'center', fontSize: wp('6%'), fontWeight: 'bold'}}>Back</Text>
                         </TouchableOpacity>
                         <TouchableOpacity
                             onPress={() => navigate('Form', {
@@ -48,10 +50,10 @@ export default class Request extends React.Component {
                             })}
                             style={stylo.button}
                         >
-                            <Text style={{color: 'white', alignItems: 'center', fontSize: 20, fontWeight: 'bold'}}>Next</Text>
+                            <Text style={{color: 'white', paddingTop: hp('1%'),paddingBottom: hp('1%') ,alignItems: 'center', fontSize: wp('6%'), fontWeight: 'bold'}}>Next</Text>
                         </TouchableOpacity>
                     </View>
-                
+                </View>
             </ScrollView>
             </ImageBackground>
         );
@@ -59,26 +61,28 @@ export default class Request extends React.Component {
 }
 
 var stylo = StyleSheet.create({
+    formStyle : {
+        marginTop: hp('30%'),
+    },
     styles : {
         backgroundColor: 'white',
-        width: '90%',
+        width: wp('90%'),
     },
 
     box1 : {
-        marginTop: '50%',
         alignItems: 'center',
     },
     box2 : {
-        marginTop: '10%',
+        marginTop: hp('10%'),
         alignItems: 'center',
         paddingBottom: '10%',
     },
     button : {
         backgroundColor: "#37bbf0",
-        width: '40%',
+        width: wp('40%'),
         alignContent: 'center',
         alignItems: 'center',
         borderWidth: 1.5,
-        marginLeft: '5%',
+        marginLeft: wp('6%'),
     }
 });

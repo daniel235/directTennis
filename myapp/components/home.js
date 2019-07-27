@@ -1,6 +1,8 @@
 import React from 'react';
 import {Platform, StyleSheet, Text, View, ImageBackground, Button, TouchableOpacity} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
 
 export default class Home extends React.Component {
     constructor(props) {
@@ -11,7 +13,6 @@ export default class Home extends React.Component {
     }
     
     render(){
-        
         const {navigate} = this.props.navigation;
         return(
             <ImageBackground source={require('./images/homePage.jpg')} style={{backgroundColor: 'black', width: '100%', height: '100%', flex: 1, justifyContent: 'space-between'}}>
@@ -30,12 +31,12 @@ export default class Home extends React.Component {
                         ><Text style={style.textStyle}>Contact Us</Text></TouchableOpacity>
                     
                 </View>
-                <View style={{position: 'absolute', bottom: '4%', width: '80%', marginLeft: '5%', height: '8%'}}>
+                <View style={style.buttonView}>
                     <TouchableOpacity
                         onPress={() => navigate('Request')}
                         style={style.button}
                         accessibilityLabel="Request Stringing"
-                    ><Text style={{color: 'white', marginTop: '1%', fontWeight: 'bold', fontSize: 25}}>Request Stringing</Text></TouchableOpacity>
+                    ><Text style={{color: 'white', marginTop: hp('.5%'), fontWeight: 'bold', fontSize: wp('6%')}}>Request Stringing</Text></TouchableOpacity>
                 </View>
             </ImageBackground>
         
@@ -45,12 +46,12 @@ export default class Home extends React.Component {
 
 var style = StyleSheet.create({
     textStyle : {
-        fontSize: 15,
+        fontSize: wp('4%'),
         color: 'white',
         alignItems: 'center',
         alignContent: 'center',
         fontWeight: 'bold',
-        marginTop: '3%',
+        marginTop: hp('1%'),
     },
     infoButton : {
         height: 40,
@@ -81,6 +82,15 @@ var style = StyleSheet.create({
         shadowOpacity: 0.8,
         shadowRadius: 2,
         elevation: 1,
+    },
+    buttonView : {
+        position: 'absolute', 
+        bottom: '4%', 
+        //width: '80%', 
+        width: wp('80%'),
+        marginLeft: wp('5%'), 
+        //height: '8%'
+        height: hp('7%')
     },
     button : {
         height: '100%',

@@ -1,4 +1,4 @@
-package com.myapp;
+package com.DirectTennis;
 
 import android.app.Application;
 
