@@ -8,7 +8,7 @@ var sendNotification = function(text){
         service: 'gmail',
         auth: {
             user: 'daduncan298@gmail.com',
-            pass: 'spursfan9.'
+            pass: '.'
         }
     });
 
